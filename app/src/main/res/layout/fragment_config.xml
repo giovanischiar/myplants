@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/maxIlluminanceEdit"
+            android:selectAllOnFocus="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Máxima luminosidade"
+            android:singleLine="true"
+            android:maxLines="1"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/maxHumidityEdit"
+            android:selectAllOnFocus="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Máxima umidade"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLines="1"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/save"
+        android:text="SALVAR"/>
+
+</LinearLayout>
