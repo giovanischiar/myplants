@@ -28,16 +28,16 @@ class ConfigFragment : Callback, Fragment() {
         rootView = inflater!!.inflate(R.layout.fragment_config, container, false)
         rootView.save.setOnClickListener {
             val maxIlluminance = Integer.parseInt(maxIlluminanceEdit.text.toString())
-            val maxHumidity = Integer.parseInt(maxHumidityEdit.text.toString())
-            post(maxIlluminance, maxHumidity)
+            val humidity = Integer.parseInt(humidityEdit.text.toString())
+            post(maxIlluminance, humidity)
         }
         return rootView
     }
 
-    fun post(maxIlluminance: Int, maxHumidity: Int) {
+    fun post(maxIlluminance: Int, humidity: Int) {
         val client = OkHttpClient()
         val JSON = MediaType.parse("application/json; charset=utf-8")
-        val body = RequestBody.create(JSON, "{\"max_illuminance\":" + maxIlluminance + ", \"humidity\":" + maxHumidity + "}")
+        val body = RequestBody.create(JSON, "{\"max_illuminance\": $maxIlluminance, \"humidity\": $humidity}")
 
         val request = Request.Builder()
                 .url("http://myplants.schiar.io/" + "configs")

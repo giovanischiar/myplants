@@ -21,11 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/maxHumidityEdit"
+            android:id="@+id/humidityEdit"
             android:selectAllOnFocus="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Máxima umidade"
+            android:hint="Umidade"
             android:inputType="number"
             android:singleLine="true"
             android:maxLines="1"/>
