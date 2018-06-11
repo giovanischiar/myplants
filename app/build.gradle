@@ -32,7 +32,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.google.firebase:firebase-messaging:11.0.4'
     implementation 'com.jjoe64:graphview:4.2.2'
-    implementation 'com.beust:klaxon:3.0.1'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.4.1'
 }
 
 
