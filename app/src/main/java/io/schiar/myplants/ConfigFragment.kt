@@ -22,10 +22,9 @@ class ConfigFragment : Callback, Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        rootView = inflater!!.inflate(R.layout.fragment_config, container, false)
+        rootView = inflater.inflate(R.layout.fragment_config, container, false)
         rootView.save.setOnClickListener {
             val maxIlluminance = Integer.parseInt(maxIlluminanceEdit.text.toString())
             val humidity = Integer.parseInt(humidityEdit.text.toString())
@@ -48,13 +47,13 @@ class ConfigFragment : Callback, Fragment() {
     }
 
     override fun onFailure(call: Call?, e: IOException?) {
-        activity.runOnUiThread {
+        activity?.runOnUiThread {
             Toast.makeText(this.context, "Erro", Toast.LENGTH_LONG).show()
         }
     }
 
     override fun onResponse(call: Call?, response: Response?) {
-        activity.runOnUiThread {
+        activity?.runOnUiThread {
             Toast.makeText(this.context, "Informações salvas", Toast.LENGTH_LONG).show()
         }
     }
